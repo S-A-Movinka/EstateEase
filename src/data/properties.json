@@ -1,0 +1,95 @@
+{
+  "properties": [
+    {
+      "id": "prop1",
+      "type": "House",
+      "bedrooms": 4,
+      "price": 85000000,
+      "tenure": "Freehold",
+      "location": "Colombo 07 (Cinnamon Gardens)",
+      "postcode": "00700",
+      "picture": "img/prop1-main.jpg",
+      "thumbnails": ["img/p1-1.jpg", "img/p1-2.jpg", "img/p1-3.jpg", "img/p1-4.jpg", "img/p1-5.jpg", "img/p1-6.jpg"],
+      "added": { "month": "January", "day": 10, "year": 2024 },
+      "description": "Architect-designed luxury house with a rooftop garden in the heart of Colombo."
+    },
+    {
+      "id": "prop2",
+      "type": "Apartment",
+      "bedrooms": 2,
+      "price": 45000000,
+      "tenure": "Leasehold",
+      "location": "Colombo 03 (Colpetty)",
+      "postcode": "00300",
+      "picture": "img/prop2-main.jpg",
+      "thumbnails": ["img/p2-1.jpg", "img/p2-2.jpg", "img/p2-3.jpg", "img/p2-4.jpg", "img/p2-5.jpg", "img/p2-6.jpg"],
+      "added": { "month": "February", "day": 14, "year": 2024 },
+      "description": "Modern sea-view apartment with access to gym and swimming pool."
+    },
+    {
+      "id": "prop3",
+      "type": "Villa",
+      "bedrooms": 5,
+      "price": 120000000,
+      "tenure": "Freehold",
+      "location": "Negombo (Beach Road)",
+      "postcode": "11500",
+      "picture": "img/prop3-main.jpg",
+      "thumbnails": ["img/p3-1.jpg", "img/p3-2.jpg", "img/p3-3.jpg", "img/p3-4.jpg", "img/p3-5.jpg", "img/p3-6.jpg"],
+      "added": { "month": "March", "day": 22, "year": 2024 },
+      "description": "Stunning colonial-style villa perfect for a boutique hotel or family home."
+    },
+    {
+      "id": "prop4",
+      "type": "Bungalow",
+      "bedrooms": 3,
+      "price": 35000000,
+      "tenure": "Freehold",
+      "location": "Kandy (Han Thana)",
+      "postcode": "20000",
+      "picture": "img/prop4-main.jpg",
+      "thumbnails": ["img/p4-1.jpg", "img/p4-2.jpg", "img/p4-3.jpg", "img/p4-4.jpg", "img/p4-5.jpg", "img/p4-6.jpg"],
+      "added": { "month": "April", "day": "05", "year": 2024 },
+      "description": "Cozy bungalow with a breathtaking view of the mountain ranges."
+    },
+    {
+      "id": "prop5",
+      "type": "Apartment",
+      "bedrooms": 3,
+      "price": 55000000,
+      "tenure": "Leasehold",
+      "location": "Rajagiriya",
+      "postcode": "10107",
+      "picture": "img/prop5-main.jpg",
+      "thumbnails": ["img/p5-1.jpg", "img/p5-2.jpg", "img/p5-3.jpg", "img/p5-4.jpg", "img/p5-5.jpg", "img/p5-6.jpg"],
+      "added": { "month": "May", "day": 12, "year": 2024 },
+      "description": "Luxury 3-bedroom unit in a high-rise with 24/7 security and backup power."
+    },
+    {
+      "id": "prop6",
+      "type": "House",
+      "bedrooms": 3,
+      "price": 28000000,
+      "tenure": "Freehold",
+      "location": "Malabe",
+      "postcode": "10115",
+      "picture": "img/prop6-main.jpg",
+      "thumbnails": ["img/p6-1.jpg", "img/p6-2.jpg", "img/p6-3.jpg", "img/p6-4.jpg", "img/p6-5.jpg", "img/p6-6.jpg"],
+      "added": { "month": "June", "day": "01", "year": 2024 },
+      "description": "Value-for-money family home located in a quiet residential area."
+    },
+    {
+      "id": "prop7",
+      "type": "Villa",
+      "bedrooms": 4,
+      "price": 95000000,
+      "tenure": "Freehold",
+      "location": "Galle (Fort Area)",
+      "postcode": "80000",
+      "picture": "img/prop7-main.jpg",
+      "thumbnails": ["img/p7-1.jpg", "img/p7-2.jpg", "img/p7-3.jpg", "img/p7-4.jpg", "img/p7-5.jpg", "img/p7-6.jpg"],
+      "added": { "month": "July", "day": 19, "year": 2024 },
+      "description": "Historic property inside the Galle Fort, beautifully restored."
+    }
+  ]
+}

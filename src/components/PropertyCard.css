@@ -1,0 +1,135 @@
+.property-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image-wrapper {
+  position: relative;
+  height: 200px;
+}
+
+.card-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.new-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #008080; /* Teal like the mockup */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* 1. The White Circle Button Container */
+.favorite-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  /* Set a fixed size for the white circle */
+  width: 36px !important;  /* Using !important to override any conflicts */
+  height: 36px !important;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+
+  /* Flexbox to perfectly center the icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Remove any default padding */
+}
+
+/* 2. The Heart PNG Icon itself */
+.heart-icon-img {
+  /* Set a fixed size for the icon so it fits inside */
+  width: 20px !important;
+  height: 20px !important;
+  /* Ensure the image scales correctly without being cut off */
+  object-fit: contain;
+  display: block; /* Removes extra space below the image */
+}
+
+/*HOVER EFFECT */
+.favorite-btn:hover .heart-icon-img {
+  transform: scale(1.1); /* Adds a slight "pop" effect */
+}
+
+.favorite-btn:hover {
+  background-color: #f45966; /* Subtle pink background on the circle */
+}
+.card-body {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.card-price {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin: 0 0 5px 0;
+  font-weight: 800;
+}
+
+.card-title {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+
+}
+
+.card-address {
+  
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.card-specs {
+  display: flex;
+  gap: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.added-date {
+  font-size: 0.75rem;
+  color: #95a5a6;
+}
+
+.view-details-link {
+  background: transparent;
+  border: none;
+  color: #008080;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
