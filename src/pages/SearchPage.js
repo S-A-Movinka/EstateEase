@@ -3,7 +3,7 @@ import PropertyList from '../components/PropertyList';
 import './SearchPage.css';
 
 const SearchPage = ({ properties }) => {
-  // 1. SEARCH STATE (The 10% Mark)
+  //SEARCH STATE 
   const [filters, setFilters] = useState({
     location: '',
     type: 'Any Property',
@@ -15,16 +15,22 @@ const SearchPage = ({ properties }) => {
 
   const [filteredResults, setFilteredResults] = useState(properties);
 
-  // 2. FILTER LOGIC 
+  // FILTER LOGIC 
   const handleSearch = () => {
     const results = properties.filter((prop) => {
       const matchLocation = prop.location.toLowerCase().includes(filters.location.toLowerCase());
       const matchType = filters.type === 'Any Property' || prop.type === filters.type;
-      const matchPrice = prop.price >= filters.minPrice && prop.price <= filters.maxPrice;
-      const matchBeds = filters.bedrooms === 'Any' || prop.bedrooms >= parseInt(filters.bedrooms);
+      const maxVal = filters.maxPrice === '' ? Infinity : parseInt(filters.maxPrice);
+      const matchPrice = prop.price >= filters.minPrice && prop.price <= maxVal;      const matchBeds = filters.bedrooms === 'Any' || prop.bedrooms >= parseInt(filters.bedrooms);
       
       // Date filtering logic (comparing strings or Date objects)
-      const matchDate = !filters.dateAfter || new Date(prop.dateAdded) >= new Date(filters.dateAfter);
+      const monthNames = ["January", "February", "March", "April", "May", "June", 
+                        "July", "August", "September", "October", "November", "December"];
+    
+      const monthIndex = monthNames.indexOf(prop.added.month);
+      const propDate = new Date(prop.added.year, monthIndex, prop.added.day);
+      const searchDate = filters.dateAfter ? new Date(filters.dateAfter) : null;
+      const matchDate = !searchDate || propDate >= searchDate;
 
       return matchLocation && matchType && matchPrice && matchBeds && matchDate;
     });
@@ -78,7 +84,7 @@ const SearchPage = ({ properties }) => {
         </div>
       </section>
 
-      {/* RESULTS DISPLAY (7% Mark) */}
+      {/* RESULTS DISPLAY  */}
       <div className="main-layout">
         <div className="left-column">
           <div className="results-header">
@@ -87,10 +93,19 @@ const SearchPage = ({ properties }) => {
           <PropertyList properties={filteredResults} />
         </div>
 
-        {/* SHORTLIST SIDEBAR (18% Mark) */}
+        {/* SHORTLIST SIDEBAR */}
         <aside className="right-sidebar">
           <div className="sidebar-card">
-            <h3>❤️ Shortlist</h3>
+            
+            <h3 className="fav-title">
+              <img 
+                src={`${process.env.PUBLIC_URL}/img/favv.png`} 
+                alt="Favorite" 
+                className="heart-icon-img" 
+              />
+              <span>Favourites</span>
+            </h3>
+            
             <p>Your saved properties will appear here.</p>
           </div>
         </aside>
