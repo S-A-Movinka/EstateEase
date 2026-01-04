@@ -116,6 +116,72 @@
   gap: 10px;
 }
 
+/* Container for each small property in the list */
+.shortlist-item-mini {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff; /* Matches standard white card bg */
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #edf2f7; /* Very light border to define the shape */
+  position: relative; /* Essential for positioning the 'X' */
+  transition: transform 0.2s ease;
+}
+
+.shortlist-item-mini .remove-btn:hover {
+  background: #ff4d4f; /* Modern red warning on hover */
+  transform: scale(1.1);
+}
+
+/* The Remove (X) Button */
+.shortlist-item-mini .remove-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #605f5f; /* Modern red */
+  color: white;
+  border: 2px solid white; /* Makes it pop off the background */
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.shortlist-item-mini .remove-btn:hover {
+  background: #ff4d4f; /* Turns red only on hover to show "Delete" action */
+  transform: scale(1.1);
+}
+
+/* The Clear All Button at the bottom */
+.clear-all {
+  width: 100%;
+  background: transparent;
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.clear-all:hover {
+  background: #fdf2f2; /* Subtle red tint */
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
 /* Responsive fix: If the screen is small, stack the items */
 @media (max-width: 992px) {
   .search-box {

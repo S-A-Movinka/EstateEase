@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropertyList from '../components/PropertyList';
 import './SearchPage.css';
 
+
 const SearchPage = ({ properties }) => {
   //SEARCH STATE 
   const [filters, setFilters] = useState({
@@ -13,7 +14,29 @@ const SearchPage = ({ properties }) => {
     dateAfter: ''
   });
 
+
   const [filteredResults, setFilteredResults] = useState(properties);
+  const [shortlist, setShortlist] = useState([]);
+  
+  // Function for clicking the heart icon
+  const addToShortlist = (property) => {
+    if (!shortlist.find(item => item.id === property.id)) {
+      setShortlist([...shortlist, property]);
+    }
+  };
+
+  // Functions for Drag and Drop
+  const handleDragOver = (e) => {
+    e.preventDefault(); // Required to allow a drop
+  };
+
+  const handleDrop = (e) => {
+    const propertyId = e.dataTransfer.getData("propertyId");
+    const propertyToAdd = properties.find(p => p.id === propertyId);
+    if (propertyToAdd) {
+      addToShortlist(propertyToAdd);
+    }
+  };
 
   // FILTER LOGIC 
   const handleSearch = () => {
@@ -36,6 +59,8 @@ const SearchPage = ({ properties }) => {
     });
     setFilteredResults(results);
   };
+
+  
 
   return (
     <div className="search-page-container">
@@ -90,23 +115,42 @@ const SearchPage = ({ properties }) => {
           <div className="results-header">
             <h2>{filteredResults.length} properties found</h2>
           </div>
-          <PropertyList properties={filteredResults} />
+          <PropertyList properties={filteredResults} onAddToShortlist={addToShortlist} />
         </div>
 
         {/* SHORTLIST SIDEBAR */}
-        <aside className="right-sidebar">
+        <aside 
+          className="right-sidebar" 
+          onDragOver={handleDragOver} 
+          onDrop={handleDrop}
+        >
           <div className="sidebar-card">
-            
             <h3 className="fav-title">
+
               <img 
                 src={`${process.env.PUBLIC_URL}/img/favv.png`} 
                 alt="Favorite" 
                 className="heart-icon-img" 
               />
-              <span>Favourites</span>
+              <span> Favourites ({shortlist.length})</span>
             </h3>
             
-            <p>Your saved properties will appear here.</p>
+            {shortlist.length === 0 ? (
+              <p>Drag properties here or click the heart icon.</p>
+            ) : (
+              <div className="shortlist-display">
+                {shortlist.map(item => (
+                  <div key={item.id} className="shortlist-item-mini">
+                    <img src={`${process.env.PUBLIC_URL}/${item.picture}`} alt="" width="50" />
+                    <p>{item.type} - LKR {item.price.toLocaleString()}</p>
+                    <button
+                      className="remove-btn" 
+                      onClick={() => setShortlist(shortlist.filter(s => s.id !== item.id))}>×</button>
+                  </div>
+                ))}
+                <button className="clear-all" onClick={() => setShortlist([])}>Clear All</button>
+              </div>
+            )}
           </div>
         </aside>
       </div>
@@ -115,3 +159,4 @@ const SearchPage = ({ properties }) => {
 };
 
 export default SearchPage;
+

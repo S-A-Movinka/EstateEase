@@ -1,9 +1,17 @@
 import React from 'react';
 import './PropertyCard.css';
 
-const PropertyCard = ({ property }) => {
+const PropertyCard = ({ property, onAddToShortlist }) => {
+  // This "packs" the ID into the ghost image you see when dragging
+  const handleDragStart = (e) => {
+    e.dataTransfer.setData("propertyId", property.id);
+  };
   return (
-    <div className="property-card">
+    <div 
+      className="property-card" 
+      draggable="true" 
+      onDragStart={handleDragStart}
+    >
       {/* 1. Image Container with Badge & Heart */}
       <div className="card-image-wrapper">
         <img 
@@ -12,7 +20,7 @@ const PropertyCard = ({ property }) => {
           className="card-main-img" 
         />
         
-        <button className="favorite-btn" aria-label="Add to Shortlist">
+        <button className="favorite-btn" onClick={() => onAddToShortlist(property)}>
           <img 
             src={`${process.env.PUBLIC_URL}/img/favv.png`} 
             alt="Favorite" 
