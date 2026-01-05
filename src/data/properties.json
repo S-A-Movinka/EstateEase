@@ -7,11 +7,14 @@
       "price": 85000000,
       "tenure": "Freehold",
       "location": "Colombo 07 (Cinnamon Gardens)",
+      "mapUrl":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.430032646393!2d79.8601639!3d6.9076118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259092895697d%3A0x77d13b4f6202422b!2sCinnamon%20Gardens%2C%20Colombo!5e0!3m2!1sen!2slk!4v1716301435678!5m2!1sen!2slk",
       "postcode": "00700",
       "picture": "img/prop1-main.jpg",
       "thumbnails": ["img/p1-1.jpg", "img/p1-2.jpg", "img/p1-3.jpg", "img/p1-4.jpg", "img/p1-5.jpg", "img/p1-6.jpg"],
       "added": { "month": "January", "day": 10, "year": 2025 },
-      "description": "Architect-designed luxury house with a rooftop garden in the heart of Colombo."
+      "description": "Architect-designed luxury house with a rooftop garden in the heart of Colombo.",
+      "longDescription": "This stunning 4-bedroom architectural masterpiece offers the pinnacle of luxury living in Colombo's most prestigious neighborhood. Featuring a sprawling rooftop garden, open-concept living areas, and high-end finishes throughout, this home is designed for those who appreciate elegance and privacy.",
+      "floorPlan": "img/floorplan.png"
     },
     {
       "id": "prop2",
@@ -20,11 +23,14 @@
       "price": 45000000,
       "tenure": "Leasehold",
       "location": "Colombo 03 (Colpetty)",
+      "mapUrl":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.16798447674!2d79.85075575!3d6.915454650000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2594226a0ffbb%3A0xa413c5b33bf575f6!2sKollupitiya%2C%20Colombo!5e0!3m2!1sen!2slk!4v1767590044172!5m2!1sen!2slk",
       "postcode": "00300",
       "picture": "img/prop2-main.jpg",
       "thumbnails": ["img/p2-1.jpg", "img/p2-2.jpg", "img/p2-3.jpg", "img/p2-4.jpg", "img/p2-5.jpg", "img/p2-6.jpg"],
       "added": { "month": "February", "day": 14, "year": 2025 },
-      "description": "Modern sea-view apartment with access to gym and swimming pool."
+      "description": "Modern sea-view apartment with access to gym and swimming pool.",
+      "longDescription": "Experience coastal urban living in this sleek 2-bedroom apartment. Located in Colpetty, the unit boasts floor-to-ceiling windows with panoramic views of the Indian Ocean. Residents enjoy exclusive access to a state-of-the-art fitness center, an infinity pool, and 24-hour concierge service.",
+      "floorPlan": "img/floorplan.png"
     },
     {
       "id": "prop3",
@@ -33,11 +39,14 @@
       "price": 120000000,
       "tenure": "Freehold",
       "location": "Negombo (Beach Road)",
+      "mapUrl":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.950435829463!2d79.84144599999999!3d7.2464813999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2e94fd3d65465%3A0x890c548007a9c86d!2sBeach%20Rd%2C%20Negombo!5e0!3m2!1sen!2slk!4v1767590296352!5m2!1sen!2slk",
       "postcode": "11500",
       "picture": "img/prop3-main.jpg",
       "thumbnails": ["img/p3-1.jpg", "img/p3-2.jpg", "img/p3-3.jpg", "img/p3-4.jpg", "img/p3-5.jpg", "img/p3-6.jpg"],
       "added": { "month": "March", "day": 22, "year": 2025 },
-      "description": "Stunning colonial-style villa perfect for a boutique hotel or family home."
+      "description": "Stunning colonial-style villa perfect for a boutique hotel or family home.",
+      "longDescription": "A rare find on Negombo's Beach Road, this expansive 5-bedroom colonial villa combines historic charm with modern convenience. With large verandas, high ceilings, and lush tropical gardens, it is an ideal investment for a boutique hotel or a grand family estate.",
+      "floorPlan": "img/floorplan.png"
     },
     {
       "id": "prop4",
@@ -50,7 +59,9 @@
       "picture": "img/prop4-main.jpg",
       "thumbnails": ["img/p4-1.jpg", "img/p4-2.jpg", "img/p4-3.jpg", "img/p4-4.jpg", "img/p4-5.jpg", "img/p4-6.jpg"],
       "added": { "month": "April", "day": "05", "year": 2025 },
-      "description": "Cozy bungalow with a breathtaking view of the mountain ranges."
+      "description": "Cozy bungalow with a breathtaking view of the mountain ranges.",
+      "longDescription": "Nestled in the hills of Han Thana, Kandy, this 3-bedroom bungalow offers peace and tranquility. The property features traditional Kandyan architecture and a large terrace perfect for enjoying the misty mountain mornings and cool climate.",
+      "floorPlan": "img/floorplan.png"
     },
     {
       "id": "prop5",
@@ -59,11 +70,14 @@
       "price": 55000000,
       "tenure": "Leasehold",
       "location": "Rajagiriya",
+      "mapUrl":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15831.026125088887!2d80.63381205!3d7.268523599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3661d99756c91%3A0xfe52e588bd5b6c7e!2sHantana!5e0!3m2!1sen!2slk!4v1767590371699!5m2!1sen!2slk",
       "postcode": "10107",
       "picture": "img/prop5-main.jpg",
       "thumbnails": ["img/p5-1.jpg", "img/p5-2.jpg", "img/p5-3.jpg", "img/p5-4.jpg", "img/p5-5.jpg", "img/p5-6.jpg"],
       "added": { "month": "May", "day": 12, "year": 2025 },
-      "description": "Luxury 3-bedroom unit in a high-rise with 24/7 security and backup power."
+      "description": "Luxury 3-bedroom unit in a high-rise with 24/7 security and backup power.",
+      "longDescription": "This premium 3-bedroom apartment in Rajagiriya offers a sophisticated lifestyle with rapid access to the city center. The high-rise building is equipped with modern safety systems, standby generators, and dedicated parking, ensuring comfort and peace of mind.",
+      "floorPlan": "img/floorplan.png"
     },
     {
       "id": "prop6",
@@ -76,20 +90,10 @@
       "picture": "img/prop6-main.jpg",
       "thumbnails": ["img/p6-1.jpg", "img/p6-2.jpg", "img/p6-3.jpg", "img/p6-4.jpg", "img/p6-5.jpg", "img/p6-6.jpg"],
       "added": { "month": "June", "day": "01", "year": 2025 },
-      "description": "Value-for-money family home located in a quiet residential area."
-    },
-    {
-      "id": "prop7",
-      "type": "Villa",
-      "bedrooms": 4,
-      "price": 95000000,
-      "tenure": "Freehold",
-      "location": "Galle (Fort Area)",
-      "postcode": "80000",
-      "picture": "img/prop7-main.jpg",
-      "thumbnails": ["img/p7-1.jpg", "img/p7-2.jpg", "img/p7-3.jpg", "img/p7-4.jpg", "img/p7-5.jpg", "img/p7-6.jpg"],
-      "added": { "month": "July", "day": 19, "year": 2025 },
-      "description": "Historic property inside the Galle Fort, beautifully restored."
+      "description": "Value-for-money family home located in a quiet residential area.",
+      "longDescription": "Perfect for first-time buyers, this 3-bedroom house in Malabe provides a spacious and secure environment for a growing family. It features a private driveway, a small backyard, and is located within walking distance of local schools and supermarkets.",
+      "floorPlan": "img/floorplan.png"
     }
+    
   ]
 }

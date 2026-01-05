@@ -87,12 +87,72 @@
   background-color: #0056b3;
 }
 
-/* Responsive Design (8% Mark) */
+/* Responsive Design (Mobile & Small Tablets) */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Hides links on mobile to keep it clean */
-  }
   .navbar {
-    padding: 10px 20px;
+    padding: 10px 15px; /* Less padding on small screens */
+    height: 60px;       /* Slightly shorter navbar */
+  }
+
+  .logo-section {
+    font-size: 1.2rem; /* Smaller font for logo */
+  }
+
+  /* 1. Transform Nav Links into a vertical dropdown */
+  .nav-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Directly under the navbar */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 2px solid #007bff;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    gap: 15px;
+    z-index: 999;
+  }
+
+  /* Class to show the menu (you will toggle this with JS) */
+  .nav-links.is-active {
+    display: flex;
+  }
+
+  /* 2. Adjust Right Side Actions */
+  .nav-right {
+    gap: 12px;
+  }
+
+  .login-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  /* 3. The Hamburger Icon (Add this to your JSX) */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #1a1a1a;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+}
+
+/* For very small phones (< 480px) */
+@media (max-width: 480px) {
+  .logo-section span {
+    display: none; /* Hide the text "EstateEase", keep only the logo image */
+  }
+  
+  .login-btn {
+    display: none; /* Optional: Hide login button on tiny screens to save space */
   }
 }

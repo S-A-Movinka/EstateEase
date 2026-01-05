@@ -1,8 +1,9 @@
 import React from 'react';
 import './PropertyCard.css';
+import { Link } from 'react-router-dom';
 
 const PropertyCard = ({ property, onAddToShortlist }) => {
-  // This "packs" the ID into the ghost image you see when dragging
+  // This "packs" the ID into the ghost image we see when dragging
   const handleDragStart = (e) => {
     e.dataTransfer.setData("propertyId", property.id);
   };
@@ -12,7 +13,9 @@ const PropertyCard = ({ property, onAddToShortlist }) => {
       draggable="true" 
       onDragStart={handleDragStart}
     >
-      {/* 1. Image Container with Badge & Heart */}
+
+
+      {/*Image Container with Badge & Heart */}
       <div className="card-image-wrapper">
         <img 
           src={`${process.env.PUBLIC_URL}/${property.picture}`} 
@@ -29,7 +32,7 @@ const PropertyCard = ({ property, onAddToShortlist }) => {
         </button>
       </div>
 
-      {/* 2. Content Section */}
+      {/*  Content Section */}
       <div className="card-body">
         <h3 className="card-price">LKR {property.price.toLocaleString()}</h3>
         <p className="card-title">{property.bedrooms} Bed {property.type}</p>
@@ -37,12 +40,15 @@ const PropertyCard = ({ property, onAddToShortlist }) => {
 
 
 
-        {/* 4. Footer with View Details */}
+        {/*  Footer with View Details */}
         <div className="card-footer">
           <span className="added-date">
             Added : {property.added.month} {property.added.day}, {property.added.year}
           </span>
-          <button className="view-details-link">View details &rarr;</button>
+
+          <Link to={`/property/${property.id}`} className="view-details-link">
+            View details &rarr;
+          </Link>
         </div>
       </div>
     </div>
@@ -50,3 +56,4 @@ const PropertyCard = ({ property, onAddToShortlist }) => {
 };
 
 export default PropertyCard;
+

@@ -12,6 +12,7 @@
   display: flex;
   gap: 20px;
   align-items: flex-end; /* Keeps the button aligned with the bottom of inputs */
+  
 }
 
 .search-field {
@@ -20,7 +21,7 @@
   flex: 1;
 }
 
-/* Label styling to match image_2cc6e7.png */
+
 .search-field label {
   font-size: 14px;
   font-weight: 600;
@@ -33,7 +34,7 @@
 .search-field select {
   padding: 12px 15px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: px;
   font-size: 15px;
   color: #444;
   background-color: #fff;
@@ -43,7 +44,7 @@
 
 .search-field input:focus, 
 .search-field select:focus {
-  border-color: #007bff;
+  border-color: #000000;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
@@ -62,7 +63,9 @@
 }
 
 .main-search-btn:hover {
-  background: #0056b3;
+  background: #3283da;
+  border-radius: 10px;
+  transform: scale(0.98);
 }
 
 .main-search-btn:active {
@@ -76,6 +79,7 @@
   gap: 40px;
   align-items: flex-start; /* Prevents sidebar from stretching to the bottom */
   margin-top: 30px;
+  margin-left: 30px;
 }
 
 
@@ -182,14 +186,79 @@
   border-color: #ff4d4f;
 }
 
-/* Responsive fix: If the screen is small, stack the items */
+/* Responsive Design  */
+
+/* 1. Tablet & Large Phones (< 992px) */
 @media (max-width: 992px) {
+  /* Stack Search Fields */
   .search-box {
     flex-direction: column;
     align-items: stretch;
+    gap: 15px;
   }
-  
+
   .main-search-btn {
+    width: 100%; /* Full width button is easier to tap */
     margin-top: 10px;
+  }
+
+  /* Switch Main Layout to Single Column */
+  .main-layout {
+    grid-template-columns: 1fr; /* Stack results and sidebar */
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 30px;
+  }
+
+  /* Move sidebar below results */
+  .right-sidebar {
+    position: static; /* Disable sticky so it flows naturally */
+    margin-top: 20px;
+    order: 2; /* Ensures it stays below the search results */
+  }
+
+  .left-column {
+    order: 1;
+  }
+}
+
+/* 2. Standard Mobile Phones (< 768px) */
+@media (max-width: 768px) {
+  .search-hero {
+    padding: 20px; /* Reduce bulky padding */
+    margin-bottom: 20px;
+  }
+
+  .results-header {
+    margin-left: 0;
+    text-align: center; /* Center "Showing X results" on mobile */
+    font-size: 0.9rem;
+  }
+
+  .sidebar-card {
+    padding: 15px;
+  }
+}
+
+/* 3. Small Mobile Phones (< 480px) */
+@media (max-width: 480px) {
+  .search-hero {
+    border-radius: 0; /* Full-width look on very small screens */
+    border-left: none;
+    border-right: none;
+    width: 50%;
+  }
+
+  
+
+  .main-search-btn {
+    font-size: 14px;
+    height: 44px;
+  }
+
+  /* Make sure the favorite mini-cards don't get too cramped */
+  .shortlist-item-mini {
+    padding: 8px;
+    font-size: 0.85rem;
   }
 }
