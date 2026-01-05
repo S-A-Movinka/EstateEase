@@ -17,7 +17,8 @@ function App() {
 
   return (
     // Add basename here to match your browser URL
-    <Router basename="/estate-agent-app"> 
+    <Router basename={process.env.PUBLIC_URL}>
+ 
       <ScrollToTop />
       <div className="App">
         <Header shortlistCount={shortlist.length} />
