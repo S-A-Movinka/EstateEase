@@ -117,7 +117,7 @@ const PropertyPage = ({ properties, shortlist, setShortlist }) => {
                 allowFullScreen
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+              />
             </TabPanel>
           </Tabs>
         </section>

@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import PropertyPage from './PropertyPage';
+import PropertyPage from './pages/PropertyPage';
+
 import '@testing-library/jest-dom';
 
 const mockProperty = [{
