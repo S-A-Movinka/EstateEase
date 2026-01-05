@@ -1,5 +1,6 @@
 EstateEase - Property Search Web Application
-Project Description
+
+Project Description:
 A responsive React-based web application that allows users to search for properties based on various criteria such as price, location, and type. This project was developed for the Advanced Client-Side Web Development (5COSC026W) module.
 
 Key Features

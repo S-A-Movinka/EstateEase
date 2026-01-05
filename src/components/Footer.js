@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* Brand Section */}
         <div className="footer-brand">
-          <Link to="/" className="footer-logo">EstateFinder</Link>
+          <Link to="/" className="footer-logo">EstateEase</Link>
           <p>Your trusted partner in finding the perfect home in Sri Lanka.</p>
         </div>
 
@@ -24,7 +24,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} EstateFinder. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} EstateEase. All Rights Reserved.</p>
       </div>
     </footer>
   );
